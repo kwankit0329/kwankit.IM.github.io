@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8">
+  <title>Q&A 网页</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 40px;
+      background-color: #f8f9fa;
+    }
+
+    .qa-container {
+      max-width: 600px;
+      margin: auto;
+    }
+
+    .question {
+      cursor: pointer;
+      background-color: #fff;
+      border: 1px solid #ccc;
+      margin-bottom: 10px;
+      padding: 15px;
+      font-weight: bold;
+      transition: background-color 0.3s;
+    }
+
+    .question:hover {
+      background-color: #f0f0f0;
+    }
+
+    .answer {
+      display: none;
+      background-color: #fafafa;
+      padding: 15px;
+      border-left: 4px solid #007BFF;
+      margin-bottom: 10px;
+    }
+  </style>
+</head>
+<body>
+  <div class="qa-container">
+    <!-- Q&A 循环 -->
+    <div class="qa">
+      <div class="question">Q1</div>
+      <div class="answer">A1</div>
+    </div>
+    <div class="qa">
+      <div class="question">Q2</div>
+      <div class="answer">A2</div>
+    </div>
+    <div class="qa">
+      <div class="question">Q3</div>
+      <div class="answer">A3</div>
+    </div>
+    <div class="qa">
+      <div class="question">Q4</div>
+      <div class="answer">A4</div>
+    </div>
+    <div class="qa">
+      <div class="question">Q5</div>
+      <div class="answer">A5</div>
+    </div>
+    <div class="qa">
+      <div class="question">Q6</div>
+      <div class="answer">A6</div>
+    </div>
+    <div class="qa">
+      <div class="question">Q7</div>
+      <div class="answer">A7</div>
+    </div>
+    <div class="qa">
+      <div class="question">Q8</div>
+      <div class="answer">A8</div>
+    </div>
+    <div class="qa">
+      <div class="question">Q9</div>
+      <div class="answer">A9</div>
+    </div>
+    <div class="qa">
+      <div class="question">Q10</div>
+      <div class="answer">A10</div>
+    </div>
+    <div class="qa">
+      <div class="question">Q11</div>
+      <div class="answer">A11</div>
+    </div>
+    <div class="qa">
+      <div class="question">Q12</div>
+      <div class="answer">A12</div>
+    </div>
+    <div class="qa">
+      <div class="question">Q13</div>
+      <div class="answer">A13</div>
+    </div>
+  </div>
+
+  <script>
+    // 给所有的 .question 添加点击事件
+    const questions = document.querySelectorAll('.question');
+
+    questions.forEach((q) => {
+      q.addEventListener('click', () => {
+        const answer = q.nextElementSibling;
+        answer.style.display = answer.style.display === 'block' ? 'none' : 'block';
+      });
+    });
+  </script>
+</body>
+</html>
