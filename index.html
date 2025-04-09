@@ -7,34 +7,38 @@
     body {
       font-family: Arial, sans-serif;
       padding: 40px;
-      background-color: #f8f9fa;
+      background-color: #000; 
+      color: #00FF00;
     }
 
     .qa-container {
-      max-width: 600px;
+      max-width: 700px;
       margin: auto;
     }
 
     .question {
       cursor: pointer;
-      background-color: #fff;
-      border: 1px solid #ccc;
+      background-color: transparent; 
       margin-bottom: 10px;
-      padding: 15px;
+      padding: 15px 10px;
       font-weight: bold;
-      transition: background-color 0.3s;
+      font-size: 18px;
+      transition: color 0.3s, transform 0.2s;
     }
 
     .question:hover {
-      background-color: #f0f0f0;
+      color: #7CFC00; /* 淡一点的绿色 hover 效果 */
+      transform: scale(1.03);
     }
 
     .answer {
       display: none;
-      background-color: #fafafa;
-      padding: 15px;
-      border-left: 4px solid #007BFF;
-      margin-bottom: 10px;
+      background-color: #111; /* 深色背景 */
+      padding: 15px 20px;
+      margin-bottom: 15px;
+      font-size: 16px;
+      border-left: 4px solid #00FF00;
+      border-radius: 4px;
     }
   </style>
 </head>
@@ -42,11 +46,11 @@
   <div class="qa-container">
     <!-- Q&A 循环 -->
     <div class="qa">
-      <div class="question">1. What was the first thing you paid attention to when interacting with the experience?</div>
+      <div class="question">Q1</div>
       <div class="answer">A1</div>
     </div>
     <div class="qa">
-      <div class="question">2. Spend two minutes with the experience and create a list of each of your discrete actions.</div>
+      <div class="question">Q2</div>
       <div class="answer">A2</div>
     </div>
     <div class="qa">
@@ -96,9 +100,7 @@
   </div>
 
   <script>
-    // 给所有的 .question 添加点击事件
     const questions = document.querySelectorAll('.question');
-
     questions.forEach((q) => {
       q.addEventListener('click', () => {
         const answer = q.nextElementSibling;
